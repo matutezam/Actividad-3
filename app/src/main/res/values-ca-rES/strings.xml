@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CercaNomPrimer</string>
+    <string name="description">Aquesta apliació et permetrà buscar un nombre primer entre les posicions 1 i 9999.\n\nIntrodueix un nombre a continuació:</string>
+    <string name="calculate">CALCULA</string>
+    <string name="invalid_value">Has d\'introduir un valor entre 1 i 9999.</string>
+</resources>
