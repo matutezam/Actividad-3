@@ -27,12 +27,8 @@ public class MainActivity extends AppCompatActivity {
             textResult.setText(invalid_value);
         } else {
             numBusca = Integer.parseInt(cadBusca);
-            if (numBusca == 0) {
-                textResult.setText(invalid_value);
-            } else {
-                String primoCad = String.valueOf(primos.consultaPrimo(numBusca));
-                textResult.setText(primoCad);
-            }
+            String primoCad = String.valueOf(primos.consultaPrimo(numBusca));
+            textResult.setText(primoCad);
         }
     }
 

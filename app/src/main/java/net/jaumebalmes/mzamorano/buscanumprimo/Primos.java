@@ -12,7 +12,12 @@ public class Primos {
 
     public int[] iniciaPrimos(int posPrimo) {   //Este método se ejecuta una única vez para crear un vector que luego tomaremos como referencia
 
-        vectorPrimos = new int[posPrimo];
+        if (posPrimo == 1) {
+            vectorPrimos = new int[posPrimo + 1];       //Para que no desborde el vector cuando definimos los primos iniciales
+        } else {
+            vectorPrimos = new int[posPrimo];
+        }
+
         vectorPrimos[0] = 2;                            //Definimos los primeros números primos del vector
         vectorPrimos[1] = 3;
         int posVec = 2;
@@ -34,21 +39,24 @@ public class Primos {
         return vectorPrimos;
     }
 
-    public int consultaPrimo(int numPrimo) {         //Método principal
+    public int consultaPrimo(int posPrimo) {         //Método principal
+        if (posPrimo < 1) {
+            return 0;                                //Evitamos que falle retornando 0.
+        }
         if (!vectorIniciado) {
-            if (numPrimo == 1) {                     //Creamos vector de dos posiciones para evitar que falle la función
-                iniciaPrimos(numPrimo + 1);   //iniciaPrimos pues necesita establecer dos números primos básicos
+            if (posPrimo == 1) {                     //Creamos vector de dos posiciones para evitar que falle la función
+                iniciaPrimos(posPrimo + 1);          //iniciaPrimos pues necesita establecer dos números primos básicos
                 vectorIniciado = true;               //para poder calcular el resto del vector
             } else {
-                iniciaPrimos(numPrimo);
+                iniciaPrimos(posPrimo);
                 vectorIniciado = true;
             }
         }
-        if (numPrimo <= vectorPrimos.length) {       //Si la posición del número primo ya ha sido calculada, devolvemos
-            return vectorPrimos[numPrimo - 1];       //dicho número por pantalla
+        if (posPrimo <= vectorPrimos.length) {       //Si la posición del número primo ya ha sido calculada, devolvemos
+            return vectorPrimos[posPrimo - 1];       //dicho número por pantalla
         } else {
-            actualizaPrimos(numPrimo);               //Si la búsqueda rebasa el vector, reutilizamos la información y
-            return vectorPrimos[numPrimo - 1];       //actualizamos sus datos a partir del último primo encontrado
+            actualizaPrimos(posPrimo);               //Si la búsqueda rebasa el vector, reutilizamos la información y
+            return vectorPrimos[posPrimo - 1];       //actualizamos sus datos a partir del último primo encontrado
         }
     }
 
