@@ -2,5 +2,6 @@
     <string name="app_name">FindPrimeNumb</string>
     <string name="description">This application will allow you to search for a prime number between positions 1 and 9999.\n\nEnter a number below:</string>
     <string name="calculate">CALCULATE</string>
-    <string name="invalid_value">You must enter a value between 1 and 9999.</string>
+    <string name="t_invalid_value">You must enter a value between 1 and 9999.</string>
+    <string name="t_final_msg">Prime number calculated!</string>
 </resources>
