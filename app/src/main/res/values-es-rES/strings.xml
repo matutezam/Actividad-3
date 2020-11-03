@@ -3,6 +3,6 @@
     <string name="app_name">BuscaNumPrimo</string>
     <string name="description">Esta apliación te permitirá buscar un número primo entre las posiciones 1 y 9999.\n\nIntroduce un número a continuación:</string>
     <string name="calculate">CALCULAR</string>
-    <string name="t_invalid_value">Debes introducir un valor entre 1 y 9999.</string>
-    <string name="t_final_msg">¡Número primo calculado!</string>
+    <string name="toast_invalid_value">Debes introducir un valor entre 1 y 9999.</string>
+    <string name="toast_final_message">¡Número primo calculado!</string>
 </resources>
